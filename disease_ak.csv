@@ -1,0 +1,25 @@
+Chahgos,,,,
+Plant Name,Scientific name,Disease type ,Disease name,Cause
+Chahgos,Camellia sinensis,Fungal,Blister blight,Fungus(Exobasidium vexans)
+Chahgos,Camellia sinensis,algal disease,Red Rust,algae(Cephaleuros virescens)
+Chahgos,Camellia sinensis,Fungal,Brown blight,colletotrichum 
+Chahgos,Camellia sinensis,Fungal,Root Rot,"Fungus(Poria hypolateritia,Rosellinia)"
+Chahgos,Camellia sinensis,Fungal,leaf Blight ,fungus(Pestalotiopsis)
+Chahgos,Camellia sinensis,Viral,Tea Mosaic Virus,Virus
+Chahgos,Camellia sinensis,Nematode,Root Knot,Meloidogyne
+Tulsi,,,,
+Tulsi,Ocimum tenuiflorum,Fungal,Wilt,Fungus(Fusarium)
+Tulsi,Ocimum tenuiflorum,Fungal,Leaf Spot,Pseudomonas
+Tulsi,Ocimum tenuiflorum,Oomycete,Downy Mildew,Peronospora
+Tulsi,Ocimum tenuiflorum,Fungal,Gray Mold,Botrytis
+Tulsi,Ocimum tenuiflorum,Bacterial,Bacterial Wilt,Ralstonia
+Tulsi,Ocimum tenuiflorum,Viral,Mosaic Virus,mosaicVirus
+Tulsi,Ocimum tenuiflorum,Nematode,Root Knot,Meloidogyne
+Neem,,,,
+Neem,Azadirachta indica,Fungal,Leaf spot,Pseudocercospora
+Neem,Azadirachta indica,Fungal,Powdery Mildew,Oidium
+Neem,Azadirachta indica,Fungal,Dieback,Phomopsis
+Neem,Azadirachta indica,Fungal,Root Rot,Ganoderma
+Neem,Azadirachta indica,Fungal,Leaf Blight ,colletotrichum 
+Neem,Azadirachta indica,Viral,Mosaic,Potyvirus
+Neem,Azadirachta indica,Nematode,Root Lesion,Pratylenchus
