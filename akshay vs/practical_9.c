@@ -46,7 +46,7 @@ void main(){
                    r=0;
                    break;
                 }
-                else if(x<a[mid]){
+                else if(p<a[mid]){
                      end=mid-1;
                 }
                 else{
