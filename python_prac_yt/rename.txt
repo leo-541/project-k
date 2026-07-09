@@ -1,6 +1,0 @@
-hey this is experimental file for python file handiling 
-this is new line
-
-this is new line2
-
-this is new line3
