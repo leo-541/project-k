@@ -4,10 +4,6 @@ import json
 import random
 from datetime import datetime
 from datetime import date
-
-#creat bank accounts sata stores
-with open("accounts.json","w") as file:
-                json.dump({},file,indent=4)
 #to read the data from the json file
 def file_read():
          with open("accounts.json","r") as file:
@@ -18,6 +14,13 @@ def file_read():
 def file_write(data):
         with open("accounts.json","w") as file:
                 json.dump(data,file,indent=4)
+
+#creat bank accounts sata stores
+a=file_read()
+if a=={}:
+  with open("accounts.json","w") as file:
+                json.dump({},file,indent=4)
+
 
 #creat bank account
 
@@ -49,9 +52,9 @@ def creat_account():
 
 
 class bank_acc:
-        def login(self):
+        def login(self,acc_num,pin):
               self.d=file_read()
-              if acc_num in self.d:
+              if (acc_num in self.d) and (pin==self.d[acc_num]["pin"]):
                      self.user_d=self.d[acc_num]
                      print("you are succesfully login")
                      return True
@@ -111,7 +114,7 @@ class bank_acc:
 
        # for show the history of transection
         def history(self):
-               if self.d[acc_num]["history"] != []:
+               if self.d[acc_num]["history"] == []:
                       print("history\nempty")
                else:
                      print("history")
@@ -125,7 +128,8 @@ while True:
  elif c=="login" or c=="2":
        log=bank_acc()
        acc_num=input("enter your account no:")
-       log_in=log.login()
+       pin=input("enter your acc pin:").strip()
+       log_in=log.login(acc_num,pin)
        if log_in ==True:
               while True:
                      choice=input("type your choice\n1.withdrawal 2.deposit 3.check balanch 4.transfer 5.update 6.remove acc 7.history 8.exit\n").strip()
