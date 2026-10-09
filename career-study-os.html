@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}</style>
+<title>Career & Study OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* Layout: one narrow column, notebook-grid ground, price + buy button at top and bottom */
+  :root {
+    --bg: #F1F5FA;
+    --grid: #E1E8F1;
+    --surface: #FFFFFF;
+    --fg: #14202E;
+    --muted: #55657A;
+    --line: #D3DCE8;
+    --accent: #1D4ED8;
+    --accent-fg: #FFFFFF;
+    --mark: #FFE45C;
+    --mark-fg: #14202E;
+    --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --font-body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0D131B; --grid: #151E2A; --surface: #141C27; --fg: #E8EEF6; --muted: #93A1B3;
+      --line: #263243; --accent: #7BA0FF; --accent-fg: #0D131B; --mark: #E9CC3C; --mark-fg: #0D131B;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0D131B; --grid: #151E2A; --surface: #141C27; --fg: #E8EEF6; --muted: #93A1B3;
+    --line: #263243; --accent: #7BA0FF; --accent-fg: #0D131B; --mark: #E9CC3C; --mark-fg: #0D131B;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.55;
+    padding-inline: 16px;
+    padding-block: 28px 40px;
+  }
+  .wrap { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+  .tag { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  h1 {
+    font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 9vw, 3rem);
+    line-height: 1.02; letter-spacing: -0.02em; margin: 10px 0 14px; text-wrap: balance;
+  }
+  h1 span { background: var(--mark); color: var(--mark-fg); padding: 0 0.15em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .lead { font-size: 1.08rem; color: var(--muted); margin: 0; max-width: 46ch; }
+
+  .buy { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .price { font-family: var(--font-display); font-weight: 800; font-size: 2rem; line-height: 1; }
+  .price small { display: block; font-family: var(--font-body); font-weight: 400; font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+  .btn {
+    flex: 1 1 200px; text-align: center; text-decoration: none;
+    background: var(--accent); color: var(--accent-fg);
+    font-weight: 700; font-size: 1.05rem; padding: 15px 22px; border-radius: 10px;
+    border: 2px solid var(--accent);
+    transition: transform 0.12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
+
+  h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; margin: 0 0 12px; letter-spacing: -0.01em; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+  .inc { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
+  .inc li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; min-width: 0; }
+  .inc li::before {
+    content: ""; flex: none; width: 14px; height: 14px; margin-top: 4px;
+    border: 2px solid var(--accent); border-radius: 3px;
+  }
+  @media (max-width: 440px) { .inc { grid-template-columns: 1fr; } }
+
+  .eg { font-family: var(--font-mono); font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px; margin: 0; }
+  .eg div { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .eg dt { color: var(--muted); }
+  .eg dd { margin: 0; }
+  .eg .ok { background: var(--mark); color: var(--mark-fg); padding: 0 0.3em; }
+  .note { font-size: 0.8rem; color: var(--muted); margin: 12px 0 0; }
+
+  .how { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+  .fine { font-size: 0.82rem; color: var(--muted); margin: 0; }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <p class="tag">Notion template · PDF download</p>
+    <h1>Career &amp; Study <span>OS</span></h1>
+    <p class="lead">Assignments, attendance, CGPA and placement prep in one Notion dashboard for college students.</p>
+  </header>
+
+  <div class="buy">
+    <div class="price">₹249<small>incl. GST · instant download</small></div>
+    <a class="btn" href="https://kreato.co.in/digital-541/d6fb65e6-edb0-482a-8b17-8109b73ceb41" target="_blank" rel="noopener">Buy now</a>
+  </div>
+
+  <section>
+    <h2>What's inside</h2>
+    <div class="panel">
+      <ul class="inc">
+        <li>Semester Study Planner</li>
+        <li>Assignment Tracker</li>
+        <li>CGPA Calculator</li>
+        <li>Attendance Calculator</li>
+        <li>Placement / Job Application Tracker</li>
+        <li>Resume Checklist</li>
+        <li>Daily Study Planner</li>
+        <li>Monthly Progress Tracker</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Attendance Calculator, for example</h2>
+    <div class="panel">
+      <dl class="eg">
+        <div><dt>Classes held</dt><dd>40</dd></div>
+        <div><dt>Classes attended</dt><dd>31</dd></div>
+        <div><dt>Attendance</dt><dd>77.5%</dd></div>
+        <div><dt>75% rule</dt><dd><span class="ok">Safe</span></dd></div>
+      </dl>
+      <p class="note">Sample numbers to show how it works.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How you get it</h2>
+    <ol class="how">
+      <li>Pay securely with Razorpay.</li>
+      <li>Download the PDF (4 pages).</li>
+      <li>Open the link inside and duplicate the template to your own Notion. The free Notion plan works.</li>
+    </ol>
+  </section>
+
+  <div class="buy">
+    <div class="price">₹249<small>GST invoice sent to your email</small></div>
+    <a class="btn" href="https://kreato.co.in/digital-541/d6fb65e6-edb0-482a-8b17-8109b73ceb41" target="_blank" rel="noopener">Buy now</a>
+  </div>
+
+  <p class="fine">Up to 3 downloads. Personal use only. Payments are handled by Razorpay on Kreato.</p>
+</main>
+</body>
+</html>
