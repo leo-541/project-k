@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="100 AI prompts to help freshers prepare resumes, job applications, interviews, sales communication, and more. Get the PDF for ₹49." />
+  <title>CareerPrompt — 100 AI Prompts for Freshers</title>
+  <style>
+    :root {
+      --navy: #172b4d;
+      --blue: #3569d4;
+      --blue-dark: #244fae;
+      --teal: #168b83;
+      --ink: #1e2b3c;
+      --muted: #66758a;
+      --paper: #ffffff;
+      --bg: #f5f8fc;
+      --line: #e4eaf3;
+      --pale-blue: #eaf1ff;
+      --pale-teal: #e8f7f4;
+      --shadow: 0 22px 60px rgba(28, 49, 84, .11);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar { padding: 18px 0; background: rgba(255,255,255,.85); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 850; letter-spacing: -.04em; color: var(--navy); font-size: 1.15rem; }
+    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 12px; background: var(--blue); color: white; font-weight: 900; box-shadow: 0 7px 18px rgba(53,105,212,.25); }
+    .nav-note { color: var(--muted); font-size: .9rem; }
+    .hero { padding: 72px 0 68px; overflow: hidden; background: radial-gradient(circle at 85% 10%, #e1eaff 0, transparent 31%), linear-gradient(180deg, #fff 0%, #f5f8fc 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 52px; align-items: center; }
+    .eyebrow { display: inline-flex; gap: 8px; align-items: center; padding: 7px 12px; border: 1px solid #d8e4fb; border-radius: 999px; color: var(--blue-dark); background: #f5f8ff; font-size: .82rem; font-weight: 750; letter-spacing: .02em; }
+    h1 { margin: 20px 0 18px; font-size: clamp(2.55rem, 5vw, 4.25rem); line-height: 1.04; letter-spacing: -.055em; color: var(--navy); }
+    h1 span { color: var(--blue); }
+    .hero-copy { max-width: 570px; font-size: 1.1rem; color: var(--muted); margin: 0 0 24px; }
+    .price-row { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; margin: 24px 0; }
+    .price { font-size: 1.55rem; font-weight: 900; color: var(--navy); background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 9px 15px; box-shadow: 0 6px 20px rgba(28,49,84,.05); }
+    .price small { font-size: .75rem; color: var(--muted); font-weight: 650; }
+    .price-note { color: var(--muted); font-size: .9rem; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 10px; border: 0; border-radius: 13px; padding: 15px 23px; text-decoration: none; font-weight: 850; font-size: 1rem; cursor: pointer; transition: transform .18s ease, box-shadow .18s ease, background .18s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(53,105,212,.25); }
+    .btn-primary { color: #fff; background: var(--blue); box-shadow: 0 8px 20px rgba(53,105,212,.2); }
+    .btn-primary:hover { background: var(--blue-dark); }
+    .btn-light { color: var(--navy); background: #fff; border: 1px solid var(--line); }
+    .trustline { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 19px; color: var(--muted); font-size: .86rem; }
+    .trustline span::before { content: "✓"; color: var(--teal); font-weight: 900; margin-right: 6px; }
+    .mockup-wrap { position: relative; min-height: 440px; display: grid; place-items: center; }
+    .orb { position: absolute; width: 350px; height: 350px; border-radius: 50%; background: linear-gradient(145deg, #dbe7ff, #d9f4ef); filter: blur(1px); }
+    .pdf-stack { position: relative; width: min(365px, 100%); transform: rotate(2deg); }
+    .pdf-back { position: absolute; inset: 17px -13px -13px 15px; border-radius: 22px; background: #b8caef; transform: rotate(7deg); box-shadow: var(--shadow); }
+    .pdf-cover { position: relative; overflow: hidden; padding: 27px; min-height: 430px; border-radius: 22px; background: linear-gradient(155deg, #ffffff 0%, #f2f6ff 100%); border: 1px solid #dce5f4; box-shadow: var(--shadow); }
+    .pdf-top { display: flex; justify-content: space-between; align-items: center; color: var(--teal); font-size: .72rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .pdf-badge { padding: 6px 9px; background: var(--pale-teal); border-radius: 8px; letter-spacing: 0; }
+    .pdf-cover h2 { margin: 34px 0 13px; font-size: 2.45rem; line-height: 1.02; letter-spacing: -.06em; color: var(--navy); }
+    .pdf-cover h2 em { color: var(--blue); font-style: normal; }
+    .pdf-cover p { color: var(--muted); font-size: .95rem; margin: 0; }
+    .mini-line { height: 1px; background: #dce5f4; margin: 24px 0 18px; }
+    .mini-feature { display: flex; gap: 10px; align-items: center; padding: 10px 0; color: #33445c; font-size: .86rem; font-weight: 650; border-bottom: 1px solid #e6ecf5; }
+    .mini-icon { width: 27px; height: 27px; flex: 0 0 27px; display: grid; place-items: center; border-radius: 8px; background: var(--pale-blue); color: var(--blue); }
+    .pdf-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 21px; gap: 10px; }
+    .pdf-bottom strong { font-size: .8rem; color: var(--navy); }
+    .pdf-price { color: white; background: var(--blue); padding: 8px 11px; border-radius: 9px; font-weight: 900; }
+    .section { padding: 76px 0; }
+    .section-white { background: #fff; }
+    .section-head { max-width: 680px; margin: 0 auto 36px; text-align: center; }
+    .section-head h2 { margin: 0 0 12px; font-size: clamp(1.9rem, 3vw, 2.7rem); line-height: 1.13; letter-spacing: -.045em; color: var(--navy); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .feature { padding: 23px 20px; background: #fff; border: 1px solid var(--line); border-radius: 18px; transition: transform .2s ease, box-shadow .2s ease; }
+    .feature:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(28,49,84,.08); }
+    .feature-icon { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 13px; background: var(--pale-blue); font-size: 1.25rem; margin-bottom: 16px; }
+    .feature:nth-child(even) .feature-icon { background: var(--pale-teal); }
+    .feature h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.03rem; line-height: 1.3; }
+    .feature p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 44px; align-items: center; }
+    .split-card { padding: 30px; border-radius: 24px; background: linear-gradient(145deg, #eaf1ff, #effaf8); border: 1px solid #dce8f8; }
+    .split-card h2 { margin: 0 0 14px; color: var(--navy); font-size: 2rem; line-height: 1.15; letter-spacing: -.04em; }
+    .split-card p { color: var(--muted); margin: 0 0 20px; }
+    .check-list { list-style: none; padding: 0; margin: 0; }
+    .check-list li { padding: 12px 0; border-bottom: 1px solid var(--line); color: #34445b; }
+    .check-list li:last-child { border-bottom: 0; }
+    .check-list li::before { content: "✓"; color: var(--teal); font-weight: 900; margin-right: 11px; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .step { padding: 25px; background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+    .step-number { width: 35px; height: 35px; display: grid; place-items: center; border-radius: 11px; background: var(--navy); color: #fff; font-weight: 900; margin-bottom: 15px; }
+    .step h3 { margin: 0 0 7px; color: var(--navy); }
+    .step p { margin: 0; color: var(--muted); font-size: .93rem; }
+    .cta-band { padding: 48px 24px; border-radius: 26px; text-align: center; color: #fff; background: linear-gradient(115deg, #1b3157, #315fc1); box-shadow: var(--shadow); }
+    .cta-band h2 { margin: 0 0 12px; font-size: clamp(1.8rem, 3.2vw, 2.7rem); line-height: 1.12; letter-spacing: -.04em; }
+    .cta-band p { margin: 0 auto 22px; max-width: 620px; color: #e1eaff; }
+    .cta-band .btn { color: var(--navy); background: #fff; }
+    .faq { max-width: 790px; margin: 0 auto; }
+    details { background: #fff; border: 1px solid var(--line); border-radius: 14px; margin: 10px 0; padding: 0 18px; }
+    summary { cursor: pointer; list-style: none; padding: 17px 0; color: var(--navy); font-weight: 800; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; float: right; color: var(--blue); font-size: 1.25rem; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--muted); margin: 0 0 18px; }
+    footer { padding: 26px 0; background: #fff; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .sticky-cta { display: none; }
+    @media (max-width: 900px) {
+      .hero { padding: 50px 0; }
+      .hero-grid, .split { grid-template-columns: 1fr; gap: 32px; }
+      .hero-copy { max-width: 680px; }
+      .mockup-wrap { min-height: 430px; }
+      .feature-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 28px, 1120px); }
+      .nav-note { display: none; }
+      .hero { padding: 38px 0 28px; }
+      h1 { font-size: 2.75rem; }
+      .hero-copy { font-size: 1rem; }
+      .btn { width: 100%; }
+      .mockup-wrap { min-height: 390px; }
+      .pdf-stack { width: min(310px, 88%); }
+      .pdf-cover { min-height: 385px; padding: 22px; }
+      .pdf-cover h2 { font-size: 2.1rem; margin-top: 27px; }
+      .orb { width: 280px; height: 280px; }
+      .section { padding: 55px 0; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .split-card { padding: 24px; }
+      .sticky-cta { display: block; position: fixed; z-index: 20; bottom: 0; left: 0; right: 0; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.94); border-top: 1px solid var(--line); backdrop-filter: blur(12px); }
+      .sticky-cta .btn { padding: 13px 18px; }
+      body { padding-bottom: 74px; }
+      footer { padding-bottom: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand"><span class="brand-mark">CP</span> CareerPrompt</div>
+      <div class="nav-note">Practical AI prompts for career starters</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">✦ MADE FOR FRESHERS</div>
+          <h1>Start your career journey <span>with AI.</span></h1>
+          <p class="hero-copy">Get practical, ready-to-use prompts for resumes, job applications, interviews, sales practice, customer communication, and more—all in one PDF.</p>
+          <div class="price-row">
+            <div class="price">₹49 <small> / PDF pack</small></div>
+            <div class="price-note">One-time purchase through Kreato</div>
+          </div>
+          <a class="btn btn-primary buy-link" href="https://kreato.co.in/digital-541/db4655b6-35df-4b50-8902-0de49fac026e" target="_blank" rel="noopener noreferrer">Get the PDF for ₹49 <span aria-hidden="true">↗</span></a>
+          <div class="trustline"><span>Digital PDF</span><span>Copy-and-customize prompts</span><span>Beginner-friendly</span></div>
+        </div>
+
+        <div class="mockup-wrap" aria-label="Illustrated preview of the digital PDF">
+          <div class="orb"></div>
+          <div class="pdf-stack">
+            <div class="pdf-back"></div>
+            <div class="pdf-cover">
+              <div class="pdf-top"><span>CareerPrompt Series</span><span class="pdf-badge">PDF GUIDE</span></div>
+              <h2>100 AI<br><em>Prompts</em><br>for Freshers</h2>
+              <p>Sales &amp; Customer-Facing<br>Job-Ready Prompt System</p>
+              <div class="mini-line"></div>
+              <div class="mini-feature"><span class="mini-icon">✎</span> Resume &amp; job applications</div>
+              <div class="mini-feature"><span class="mini-icon">◎</span> Interview &amp; sales practice</div>
+              <div class="mini-feature"><span class="mini-icon">✉</span> Customer replies &amp; follow-ups</div>
+              <div class="mini-feature"><span class="mini-icon">▦</span> Projects, trackers &amp; reports</div>
+              <div class="pdf-bottom"><strong>CHATGPT · CLAUDE · GEMINI</strong><span class="pdf-price">₹49</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <h2>One prompt pack. Multiple career tasks.</h2>
+          <p>Explore the main areas covered in the PDF and choose prompts that fit the task you’re working on.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-icon">📝</div><h3>Resume &amp; LinkedIn</h3><p>Get help presenting your skills, projects, profile, and experience clearly.</p></article>
+          <article class="feature"><div class="feature-icon">📨</div><h3>Job Applications</h3><p>Draft application emails, cover notes, and professional follow-up messages.</p></article>
+          <article class="feature"><div class="feature-icon">🎯</div><h3>Interview Preparation</h3><p>Practise common interview questions and prepare more structured answers.</p></article>
+          <article class="feature"><div class="feature-icon">💬</div><h3>Sales Practice</h3><p>Work on call scripts, customer objections, and sales conversations.</p></article>
+          <article class="feature"><div class="feature-icon">🤝</div><h3>Customer Communication</h3><p>Create clearer replies for complaints, questions, and customer follow-ups.</p></article>
+          <article class="feature"><div class="feature-icon">🧩</div><h3>Projects &amp; Internships</h3><p>Explore practical project ideas and prompts for internship outreach.</p></article>
+          <article class="feature"><div class="feature-icon">📊</div><h3>CRM &amp; Reports</h3><p>Work with lead tracking, sales reports, follow-up trackers, and spreadsheet tasks.</p></article>
+          <article class="feature"><div class="feature-icon">🗓️</div><h3>Plan &amp; Review</h3><p>Use the included planning and review material to organise your next steps.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="split-card">
+          <h2>Less guesswork. More structured prompts.</h2>
+          <p>Use the prompts as a starting point, replace the placeholders with your own details, and review the AI’s output before using it.</p>
+          <a class="btn btn-primary buy-link" href="https://kreato.co.in/digital-541/db4655b6-35df-4b50-8902-0de49fac026e" target="_blank" rel="noopener noreferrer">Get the PDF — ₹49 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div>
+          <div class="section-head" style="text-align:left; margin:0 0 18px">
+            <h2>Who is it for?</h2>
+            <p>This prompt pack is designed for people starting out in sales and customer-facing careers.</p>
+          </div>
+          <ul class="check-list">
+            <li>College students and recent graduates</li>
+            <li>Freshers preparing for their first job application</li>
+            <li>Applicants practising interviews and professional communication</li>
+            <li>Beginners exploring sales or customer-support roles</li>
+            <li>People who want a structured prompt library to customise</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <h2>Simple to get started</h2>
+          <p>Use the PDF as a practical helper—not as a substitute for your own judgement.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-number">1</div><h3>Get the PDF</h3><p>Use the button to open the product page on Kreato.</p></article>
+          <article class="step"><div class="step-number">2</div><h3>Choose a prompt</h3><p>Pick a prompt that matches the task you need help with.</p></article>
+          <article class="step"><div class="step-number">3</div><h3>Customise &amp; review</h3><p>Fill in your real details, check the response, and edit it to fit your situation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Make your next career task easier.</h2>
+          <p>Get the Fresher Sales &amp; Customer-Facing Job-Ready Prompt System PDF for ₹49.</p>
+          <a class="btn buy-link" href="https://kreato.co.in/digital-541/db4655b6-35df-4b50-8902-0de49fac026e" target="_blank" rel="noopener noreferrer">View Product on Kreato — ₹49 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head">
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details><summary>What do I get?</summary><p>A digital PDF prompt pack focused on fresher resumes, job applications, interviews, sales practice, customer communication, projects, and related work tasks.</p></details>
+          <details><summary>Which AI tools can I use?</summary><p>The product cover states that the prompts work with ChatGPT, Claude, and Gemini. Availability and features may vary by tool and account.</p></details>
+          <details><summary>Will this guarantee me a job?</summary><p>No. The PDF is a practical prompt resource. It does not guarantee interviews, employment, or specific outcomes.</p></details>
+          <details><summary>How do I purchase it?</summary><p>Click any “Get the PDF” button to open the product page on Kreato, where you can review the listing and complete the purchase.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta">
+    <a class="btn btn-primary buy-link" href="https://kreato.co.in/digital-541/db4655b6-35df-4b50-8902-0de49fac026e" target="_blank" rel="noopener noreferrer">Get the PDF for ₹49 ↗</a>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> CareerPrompt. Digital product landing page.</span>
+      <span>Helpful prompts, honest claims. No job guarantee.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Keep every purchase button pointed to the same product page.
+    const productUrl = "https://kreato.co.in/digital-541/db4655b6-35df-4b50-8902-0de49fac026e";
+    document.querySelectorAll(".buy-link").forEach((button) => {
+      button.href = productUrl;
+      button.target = "_blank";
+      button.rel = "noopener noreferrer";
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
